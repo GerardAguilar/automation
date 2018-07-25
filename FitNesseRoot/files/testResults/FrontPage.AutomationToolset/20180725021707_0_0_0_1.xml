@@ -1,0 +1,952 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20180127</FitNesseVersion>
+  <rootPath>FrontPage.AutomationToolset</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>17</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <date>2018-07-25T02:17:07-07:00</date>
+    <runTimeInMillis>7801</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\Documents\GitHub\automation\target\classes&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;paths&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
+&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\baseline&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\resources.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\rt.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\jsse.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\jce.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\charsets.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\jfr.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\access-bridge-64.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\cldrdata.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\dnsns.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\jaccess.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\jfxrt.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\localedata.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\nashorn.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\sunec.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\sunjce_provider.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\sunmscapi.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\sunpkcs11.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Program Files\Java\jre1.8.0_161\lib\ext\zipfs.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-java\3.9.1\selenium-java-3.9.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-api\3.9.1\selenium-api-3.9.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.9.1\selenium-chrome-driver-3.9.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.9.1\selenium-edge-driver-3.9.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.9.1\selenium-firefox-driver-3.9.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.9.1\selenium-ie-driver-3.9.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.9.1\selenium-opera-driver-3.9.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.9.1\selenium-remote-driver-3.9.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.9.1\selenium-safari-driver-3.9.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-support\3.9.1\selenium-support-3.9.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\net\bytebuddy\byte-buddy\1.7.9\byte-buddy-1.7.9.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\com\google\guava\guava\23.6-jre\guava-23.6-jre.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\com\squareup\okhttp3\okhttp\3.9.1\okhttp-3.9.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\com\squareup\okio\okio\1.13.0\okio-1.13.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\apache\poi\poi\3.17\poi-3.17.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\apache\poi\poi-ooxml\3.17\poi-ooxml-3.17.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.17\poi-ooxml-schemas-3.17.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\com\github\virtuald\curvesapi\1.04\curvesapi-1.04.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\fitnesse\fitnesse\20180127\fitnesse-20180127.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\htmlparser\htmlparser\2.1\htmlparser-2.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\htmlparser\htmllexer\2.1\htmllexer-2.1.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\apache\velocity\velocity\1.7\velocity-1.7.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\json\json\20151123\json-20151123.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\com\googlecode\java-diff-utils\diffutils\1.3.0\diffutils-1.3.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\apache\ant\ant\1.9.6\ant-1.9.6.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\apache\ant\ant-launcher\1.9.6\ant-launcher-1.9.6.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\junit\junit\4.12\junit-4.12.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\commons-io-2.6\commons-io-2.6.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\com\nativelibs4java\bridj\0.6.2\bridj-0.6.2.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\image-comparison-1.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.m2\repository\com\sikulix\sikulixapi\1.1.0\sikulixapi-1.1.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.p2\pool\plugins\org.testng_6.13.1.r201712040515.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.p2\pool\plugins\com.beust.jcommander_1.72.0.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.p2\pool\plugins\org.apache-extras.beanshell.bsh_2.0.0.b6.jar&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\Gerard\.p2\pool\plugins\org.yaml.snakeyaml_1.17.0.jar&lt;/span&gt;&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;imports&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;automation&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.slim.test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.fixtures&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="11"&gt;&lt;span class="pass"&gt;AutomationToolset&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;notes&lt;/td&gt;
+		&lt;td&gt;setup command&lt;/td&gt;
+		&lt;td&gt;chrome binary location&lt;/td&gt;
+		&lt;td&gt;execute command?&lt;/td&gt;
+		&lt;td&gt;xpath&lt;/td&gt;
+		&lt;td&gt;will Wait For Expected Condition Type&lt;/td&gt;
+		&lt;td&gt;wait for?&lt;/td&gt;
+		&lt;td&gt;will simulate navigation&lt;/td&gt;
+		&lt;td&gt;will simulate click&lt;/td&gt;
+		&lt;td&gt;will simulate dropdown select&lt;/td&gt;
+		&lt;td&gt;simulate?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;home&lt;/td&gt;
+		&lt;td&gt;initialize baseline&lt;/td&gt;
+		&lt;td&gt;C:\GoogleChromePortable\GoogleChromePortable.exe&lt;/td&gt;
+		&lt;td&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;http://inhancemetrics.com:3012/test-new.html&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;Product_Type&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;/html[1]/body[1]/div[3]/div[1]/select[1]&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;/html[1]/body[1]/div[3]/div[1]/select[1]&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;Window&lt;/td&gt;
+		&lt;td&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;Product&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/select[1]&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="exception closed"&gt;
+		&lt;td class="error"&gt;Product&lt;/td&gt;
+		&lt;td class="error"&gt;&lt;/td&gt;
+		&lt;td class="error"&gt;&lt;/td&gt;
+		&lt;td class="error"&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+		&lt;td class="error"&gt;/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/select[1]&lt;/td&gt;
+		&lt;td class="error"&gt;presenceOfElementLocated&lt;/td&gt;
+		&lt;td class="error"&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+		&lt;td class="error"&gt;&lt;/td&gt;
+		&lt;td class="error"&gt;&lt;/td&gt;
+		&lt;td class="error"&gt;Awning&lt;/td&gt;
+		&lt;td class="error"&gt;&lt;/td&gt;
+	&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td colspan="11"&gt;&lt;pre&gt;__EXCEPTION__:org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Awning
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
+System info: host: 'DESKTOP-8N5L04U', ip: '192.168.0.51', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_162'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151) [selenium-support-3.9.1.jar]
+	at automation.AutomationToolset.selectFromDropdown(AutomationToolset.java:338) [file:/C:/Users/Gerard/Documents/GitHub/automation/target/classes/]
+	at automation.AutomationToolset.simulate(AutomationToolset.java:185) [file:/C:/Users/Gerard/Documents/GitHub/automation/target/classes/]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) [rt.jar:1.8.0_162]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) [rt.jar:1.8.0_162]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) [rt.jar:1.8.0_162]
+	at java.lang.reflect.Method.invoke(Unknown Source) [rt.jar:1.8.0_162]
+	at fitnesse.slim.fixtureInteraction.DefaultInteraction.methodInvoke(DefaultInteraction.java:221) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.fixtureInteraction.DefaultInteraction.callMethod(DefaultInteraction.java:206) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.fixtureInteraction.DefaultInteraction.invokeMethod(DefaultInteraction.java:188) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.fixtureInteraction.DefaultInteraction.findAndInvoke(DefaultInteraction.java:166) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.instructions.CallInstruction.executeInternal(CallInstruction.java:35) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:82) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:75) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:62) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:47) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20180127.jar:20180127]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20180127.jar:20180127]&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;end&lt;/td&gt;
+		&lt;td&gt;end&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="ignore"&gt;/__VOID__/&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>AutomationToolset</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='automation'}</instruction>
+        <slimResult>pass(automation)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>automation</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='import_1_0', instruction='import', path='fitnesse.slim.test'}</instruction>
+        <slimResult>pass(fitnesse.slim.test)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_1_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>fitnesse.slim.test</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='import_2_0', instruction='import', path='fitnesse.fixtures'}</instruction>
+        <slimResult>pass(fitnesse.fixtures)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_2_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>fitnesse.fixtures</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_0', instruction='make', instanceName='decisionTable_3', className='AutomationToolset', args=[]}</instruction>
+        <slimResult>pass(AutomationToolset)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>decisionTable_3_0</instructionId>
+                    <col>0</col>
+                              <row>0</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>AutomationToolset</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_4', instruction='call', instanceName='decisionTable_3', methodName='setNotes', args=[home]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_4</instructionId>
+                    <col>0</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_5', instruction='call', instanceName='decisionTable_3', methodName='setSetupCommand', args=[initialize baseline]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_5</instructionId>
+                    <col>1</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_6', instruction='call', instanceName='decisionTable_3', methodName='setChromeBinaryLocation', args=[C:\GoogleChromePortable\GoogleChromePortable.exe]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_6</instructionId>
+                    <col>2</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_7', instruction='call', instanceName='decisionTable_3', methodName='setXpath', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_7</instructionId>
+                    <col>4</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_8', instruction='call', instanceName='decisionTable_3', methodName='setWillWaitForExpectedConditionType', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_8</instructionId>
+                    <col>5</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_9', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateNavigation', args=[http://inhancemetrics.com:3012/test-new.html]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_9</instructionId>
+                    <col>7</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_10', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateClick', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_10</instructionId>
+                    <col>8</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_11', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateDropdownSelect', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_11</instructionId>
+                    <col>9</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_13', instruction='call', instanceName='decisionTable_3', methodName='executeCommand', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_13</instructionId>
+                    <col>3</col>
+                              <row>2</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_14', instruction='call', instanceName='decisionTable_3', methodName='waitFor', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_14</instructionId>
+                    <col>6</col>
+                              <row>2</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_15', instruction='call', instanceName='decisionTable_3', methodName='simulate', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_15</instructionId>
+                    <col>10</col>
+                              <row>2</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_17', instruction='call', instanceName='decisionTable_3', methodName='setNotes', args=[Product_Type]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_17</instructionId>
+                    <col>0</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_18', instruction='call', instanceName='decisionTable_3', methodName='setSetupCommand', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_18</instructionId>
+                    <col>1</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_19', instruction='call', instanceName='decisionTable_3', methodName='setChromeBinaryLocation', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_19</instructionId>
+                    <col>2</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_20', instruction='call', instanceName='decisionTable_3', methodName='setXpath', args=[/html[1]/body[1]/div[3]/div[1]/select[1]]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_20</instructionId>
+                    <col>4</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_21', instruction='call', instanceName='decisionTable_3', methodName='setWillWaitForExpectedConditionType', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_21</instructionId>
+                    <col>5</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_22', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateNavigation', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_22</instructionId>
+                    <col>7</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_23', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateClick', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_23</instructionId>
+                    <col>8</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_24', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateDropdownSelect', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_24</instructionId>
+                    <col>9</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_26', instruction='call', instanceName='decisionTable_3', methodName='executeCommand', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_26</instructionId>
+                    <col>3</col>
+                              <row>3</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_27', instruction='call', instanceName='decisionTable_3', methodName='waitFor', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_27</instructionId>
+                    <col>6</col>
+                              <row>3</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_28', instruction='call', instanceName='decisionTable_3', methodName='simulate', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_28</instructionId>
+                    <col>10</col>
+                              <row>3</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_30', instruction='call', instanceName='decisionTable_3', methodName='setNotes', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_30</instructionId>
+                    <col>0</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_31', instruction='call', instanceName='decisionTable_3', methodName='setSetupCommand', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_31</instructionId>
+                    <col>1</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_32', instruction='call', instanceName='decisionTable_3', methodName='setChromeBinaryLocation', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_32</instructionId>
+                    <col>2</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_33', instruction='call', instanceName='decisionTable_3', methodName='setXpath', args=[/html[1]/body[1]/div[3]/div[1]/select[1]]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_33</instructionId>
+                    <col>4</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_34', instruction='call', instanceName='decisionTable_3', methodName='setWillWaitForExpectedConditionType', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_34</instructionId>
+                    <col>5</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_35', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateNavigation', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_35</instructionId>
+                    <col>7</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_36', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateClick', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_36</instructionId>
+                    <col>8</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_37', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateDropdownSelect', args=[Window]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_37</instructionId>
+                    <col>9</col>
+                              <row>4</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_39', instruction='call', instanceName='decisionTable_3', methodName='executeCommand', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_39</instructionId>
+                    <col>3</col>
+                              <row>4</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_40', instruction='call', instanceName='decisionTable_3', methodName='waitFor', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_40</instructionId>
+                    <col>6</col>
+                              <row>4</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_41', instruction='call', instanceName='decisionTable_3', methodName='simulate', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_41</instructionId>
+                    <col>10</col>
+                              <row>4</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_43', instruction='call', instanceName='decisionTable_3', methodName='setNotes', args=[Product]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_43</instructionId>
+                    <col>0</col>
+                              <row>5</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_44', instruction='call', instanceName='decisionTable_3', methodName='setSetupCommand', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_44</instructionId>
+                    <col>1</col>
+                              <row>5</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_45', instruction='call', instanceName='decisionTable_3', methodName='setChromeBinaryLocation', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_45</instructionId>
+                    <col>2</col>
+                              <row>5</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_46', instruction='call', instanceName='decisionTable_3', methodName='setXpath', args=[/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/select[1]]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_46</instructionId>
+                    <col>4</col>
+                              <row>5</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_47', instruction='call', instanceName='decisionTable_3', methodName='setWillWaitForExpectedConditionType', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_47</instructionId>
+                    <col>5</col>
+                              <row>5</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_48', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateNavigation', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_48</instructionId>
+                    <col>7</col>
+                              <row>5</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_49', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateClick', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_49</instructionId>
+                    <col>8</col>
+                              <row>5</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_50', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateDropdownSelect', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_50</instructionId>
+                    <col>9</col>
+                              <row>5</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_52', instruction='call', instanceName='decisionTable_3', methodName='executeCommand', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_52</instructionId>
+                    <col>3</col>
+                              <row>5</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_53', instruction='call', instanceName='decisionTable_3', methodName='waitFor', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_53</instructionId>
+                    <col>6</col>
+                              <row>5</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_54', instruction='call', instanceName='decisionTable_3', methodName='simulate', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_54</instructionId>
+                    <col>10</col>
+                              <row>5</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_56', instruction='call', instanceName='decisionTable_3', methodName='setNotes', args=[Product]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_56</instructionId>
+                    <col>0</col>
+                              <row>6</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_57', instruction='call', instanceName='decisionTable_3', methodName='setSetupCommand', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_57</instructionId>
+                    <col>1</col>
+                              <row>6</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_58', instruction='call', instanceName='decisionTable_3', methodName='setChromeBinaryLocation', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_58</instructionId>
+                    <col>2</col>
+                              <row>6</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_59', instruction='call', instanceName='decisionTable_3', methodName='setXpath', args=[/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/select[1]]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_59</instructionId>
+                    <col>4</col>
+                              <row>6</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_60', instruction='call', instanceName='decisionTable_3', methodName='setWillWaitForExpectedConditionType', args=[presenceOfElementLocated]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_60</instructionId>
+                    <col>5</col>
+                              <row>6</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_61', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateNavigation', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_61</instructionId>
+                    <col>7</col>
+                              <row>6</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_62', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateClick', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_62</instructionId>
+                    <col>8</col>
+                              <row>6</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_63', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateDropdownSelect', args=[Awning]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_63</instructionId>
+                    <col>9</col>
+                              <row>6</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_65', instruction='call', instanceName='decisionTable_3', methodName='executeCommand', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_65</instructionId>
+                    <col>3</col>
+                              <row>6</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_66', instruction='call', instanceName='decisionTable_3', methodName='waitFor', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_66</instructionId>
+                    <col>6</col>
+                              <row>6</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_67', instruction='call', instanceName='decisionTable_3', methodName='simulate', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_3_67</instructionId>
+                              <type>ReturnedValueExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_69', instruction='call', instanceName='decisionTable_3', methodName='setNotes', args=[end]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_69</instructionId>
+                    <col>0</col>
+                              <row>7</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_70', instruction='call', instanceName='decisionTable_3', methodName='setSetupCommand', args=[end]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_70</instructionId>
+                    <col>1</col>
+                              <row>7</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_71', instruction='call', instanceName='decisionTable_3', methodName='setChromeBinaryLocation', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_71</instructionId>
+                    <col>2</col>
+                              <row>7</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_72', instruction='call', instanceName='decisionTable_3', methodName='setXpath', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_72</instructionId>
+                    <col>4</col>
+                              <row>7</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_73', instruction='call', instanceName='decisionTable_3', methodName='setWillWaitForExpectedConditionType', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_73</instructionId>
+                    <col>5</col>
+                              <row>7</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_74', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateNavigation', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_74</instructionId>
+                    <col>7</col>
+                              <row>7</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_75', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateClick', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_75</instructionId>
+                    <col>8</col>
+                              <row>7</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_76', instruction='call', instanceName='decisionTable_3', methodName='setWillSimulateDropdownSelect', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_3_76</instructionId>
+                    <col>9</col>
+                              <row>7</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_78', instruction='call', instanceName='decisionTable_3', methodName='executeCommand', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_78</instructionId>
+                    <col>3</col>
+                              <row>7</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_79', instruction='call', instanceName='decisionTable_3', methodName='waitFor', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_79</instructionId>
+                    <col>6</col>
+                              <row>7</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_3_80', instruction='call', instanceName='decisionTable_3', methodName='simulate', args=[]}</instruction>
+        <slimResult>ignore(/__VOID__/)</slimResult>
+                <expectation>
+                    <status>ignore</status>
+                    <instructionId>decisionTable_3_80</instructionId>
+                    <col>10</col>
+                              <row>7</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>/__VOID__/</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp "C:\Users\Gerard\.m2\repository\org\fitnesse\fitnesse\20180127\fitnesse-20180127.jar;C:\Users\Gerard\Documents\GitHub\automation\target\classes;C:\baseline;C:\Program Files\Java\jre1.8.0_161\lib\resources.jar;C:\Program Files\Java\jre1.8.0_161\lib\rt.jar;C:\Program Files\Java\jre1.8.0_161\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_161\lib\jce.jar;C:\Program Files\Java\jre1.8.0_161\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_161\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\cldrdata.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\dnsns.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\jaccess.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\jfxrt.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\localedata.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\nashorn.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\sunec.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\sunmscapi.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jre1.8.0_161\lib\ext\zipfs.jar;C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-java\3.9.1\selenium-java-3.9.1.jar;C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-api\3.9.1\selenium-api-3.9.1.jar;C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.9.1\selenium-chrome-driver-3.9.1.jar;C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.9.1\selenium-edge-driver-3.9.1.jar;C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.9.1\selenium-firefox-driver-3.9.1.jar;C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.9.1\selenium-ie-driver-3.9.1.jar;C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.9.1\selenium-opera-driver-3.9.1.jar;C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.9.1\selenium-remote-driver-3.9.1.jar;C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.9.1\selenium-safari-driver-3.9.1.jar;C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-support\3.9.1\selenium-support-3.9.1.jar;C:\Users\Gerard\.m2\repository\net\bytebuddy\byte-buddy\1.7.9\byte-buddy-1.7.9.jar;C:\Users\Gerard\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Gerard\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\Gerard\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Gerard\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar;C:\Users\Gerard\.m2\repository\com\google\guava\guava\23.6-jre\guava-23.6-jre.jar;C:\Users\Gerard\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Gerard\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\Gerard\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\Gerard\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Gerard\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Gerard\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar;C:\Users\Gerard\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar;C:\Users\Gerard\.m2\repository\com\squareup\okhttp3\okhttp\3.9.1\okhttp-3.9.1.jar;C:\Users\Gerard\.m2\repository\com\squareup\okio\okio\1.13.0\okio-1.13.0.jar;C:\Users\Gerard\.m2\repository\org\apache\poi\poi\3.17\poi-3.17.jar;C:\Users\Gerard\.m2\repository\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar;C:\Users\Gerard\.m2\repository\org\apache\poi\poi-ooxml\3.17\poi-ooxml-3.17.jar;C:\Users\Gerard\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.17\poi-ooxml-schemas-3.17.jar;C:\Users\Gerard\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;C:\Users\Gerard\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\Gerard\.m2\repository\com\github\virtuald\curvesapi\1.04\curvesapi-1.04.jar;C:\Users\Gerard\.m2\repository\org\fitnesse\fitnesse\20180127\fitnesse-20180127.jar;C:\Users\Gerard\.m2\repository\org\htmlparser\htmlparser\2.1\htmlparser-2.1.jar;C:\Users\Gerard\.m2\repository\org\htmlparser\htmllexer\2.1\htmllexer-2.1.jar;C:\Users\Gerard\.m2\repository\org\apache\velocity\velocity\1.7\velocity-1.7.jar;C:\Users\Gerard\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\Gerard\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\Gerard\.m2\repository\org\json\json\20151123\json-20151123.jar;C:\Users\Gerard\.m2\repository\com\googlecode\java-diff-utils\diffutils\1.3.0\diffutils-1.3.0.jar;C:\Users\Gerard\.m2\repository\org\apache\ant\ant\1.9.6\ant-1.9.6.jar;C:\Users\Gerard\.m2\repository\org\apache\ant\ant-launcher\1.9.6\ant-launcher-1.9.6.jar;C:\Users\Gerard\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Gerard\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\commons-io-2.6\commons-io-2.6.jar;C:\Users\Gerard\.m2\repository\com\nativelibs4java\bridj\0.6.2\bridj-0.6.2.jar;C:\image-comparison-1.0.jar;C:\Users\Gerard\.m2\repository\com\sikulix\sikulixapi\1.1.0\sikulixapi-1.1.0.jar;C:\Users\Gerard\.p2\pool\plugins\org.testng_6.13.1.r201712040515.jar;C:\Users\Gerard\.p2\pool\plugins\com.beust.jcommander_1.72.0.jar;C:\Users\Gerard\.p2\pool\plugins\org.apache-extras.beanshell.bsh_2.0.0.b6.jar;C:\Users\Gerard\.p2\pool\plugins\org.yaml.snakeyaml_1.17.0.jar" fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut>initialize()
+Location of chromedriver.exe is C:\Users\Gerard\Documents\GitHub\automation\chromedriver.exe
+chromedriver.exe already exists
+end initialize()
+count: 3
+count: 3
+count: 14
+count: 14
+</stdOut>
+    <stdErr>Starting ChromeDriver 2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73) on port 30177
+
+Only local connections are allowed.
+
+Jul 25, 2018 2:17:12 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+
+</stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>8554</totalRunTimeInMillis>
+</testResults>
+

@@ -13,12 +13,14 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
@@ -44,9 +46,9 @@ import com.google.common.base.Function;
  * -Will only use Chrome for now
  */
 public class AutomationToolset {
-	protected WebDriver driver;
-	protected WebDriverWait wait;
-	protected Screen s = new Screen();
+	public WebDriver driver;
+	public WebDriverWait wait;
+	public Screen s = new Screen();
 	public String instanceStartTime;
 	public ArrayList<String> navigationPath;
 	public String cwd;
@@ -54,9 +56,9 @@ public class AutomationToolset {
 	public String xpath;	
 	public String setupCommand;	
 	public String notes;
-	protected PrintWriter out;
-	protected boolean baselineSet = false;
-	protected String loc;		
+	public PrintWriter out;
+	public boolean baselineSet = false;
+	public String loc;		
 	
 	public boolean willSimulateClick;
 	public String willSimulateNavigation;	
@@ -65,6 +67,7 @@ public class AutomationToolset {
 	public String willSimulateDropdownSelect;
 	public String willWaitForExpectedConditionType;
 	public String willWaitForJavascriptExecutorString;
+//	public String willWaitForSelectDropdownOptions;
 	
 	public AutomationToolset() {
 		try {
@@ -74,7 +77,8 @@ public class AutomationToolset {
 		}	
 	}
 	
-	public void initialize() {		
+	public void initialize() {	
+		System.out.println("initialize()");
 	    navigationPath = new ArrayList<String>();
 	    navigationPath = new ArrayList<String>();
 	    instanceStartTime = (new Timestamp(System.currentTimeMillis())).getTime()+"";		
@@ -95,9 +99,9 @@ public class AutomationToolset {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}	    
-	    driver.get("about:blank");
-	    driver.manage().window().maximize(); 
+
 	    wait = new WebDriverWait(driver, 20);
+	    System.out.println("end initialize()");
 	}
 	
 	public void setWillSimulateNavigation(String temp) {
@@ -137,6 +141,13 @@ public class AutomationToolset {
 	public boolean getWillEndScreening() {
 		return willEndScreening;
 	}
+//	public void setWillWaitForSelectDropdownOptions(String temp) {
+//		willWaitForSelectDropdownOptions = temp;
+//	}
+//	public String getWillWaitForSelectDropdownOptions() {
+//		return willWaitForSelectDropdownOptions;
+//	}
+	
 	public void setNotes(String temp) {
 		notes = temp;
 	}
@@ -172,6 +183,25 @@ public class AutomationToolset {
 		navigateByGlobalAddress();
 		clickElementByXpath();
 		selectFromDropdown();
+	}
+	
+	public void waitForSelectDropdownOptions() {
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+			    .withTimeout(6, TimeUnit.SECONDS)
+			    .pollingEvery(1, TimeUnit.SECONDS)
+			    .ignoring(NoSuchElementException.class);
+		
+		wait.until(new Function<WebDriver, Boolean>() 
+		{
+			public Boolean apply(WebDriver driverCopy) {
+				Select select = new Select(driver.findElement(By.xpath(xpath)));
+				int count = select.getOptions().size();
+				boolean selectHasOptions = count>1;
+	            System.out.println("count: " + count);
+	            return selectHasOptions;
+			}
+		});	
+		
 	}
 	
 	//Waits for source code to stabilize and be identical, needs testing and may need other waits (CSS, JQuery, ExpectedConditions)
@@ -210,14 +240,20 @@ public class AutomationToolset {
 				Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)			    
 						.withTimeout(12, TimeUnit.SECONDS)
 					    .pollingEvery((long) .5, TimeUnit.SECONDS)
-					    .ignoring(NoSuchElementException.class);
+					    .ignoring(NoSuchElementException.class)
+						.ignoring(ElementNotVisibleException.class);
 				
 				JavascriptExecutor jseWait = (JavascriptExecutor)driver;
 				Wait<JavascriptExecutor> waitJse = new FluentWait<JavascriptExecutor>(jseWait)
 					    .withTimeout(6, TimeUnit.SECONDS)
 					    .pollingEvery(2, TimeUnit.SECONDS)
 					    .ignoring(NoSuchElementException.class);
-							
+				
+				String[] splitXpath = xpath.split("/");
+				if(splitXpath[splitXpath.length-1].contains("select")) {
+					waitForSelectDropdownOptions();					
+				}
+				
 				if(willWaitForExpectedConditionType.length()>0) {
 					willWaitForExpectedConditionType = willWaitForExpectedConditionType.toLowerCase();
 					switch(willWaitForExpectedConditionType) {
@@ -240,31 +276,37 @@ public class AutomationToolset {
 							wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(xpath)));
 							System.out.println("wait invisibilityofelementlocated end");
 							break;
+						case "presenceOfElementLocated":
+							wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+							System.out.println("wait presentOfElementLocated");
+							WebElement elCopy = driver.findElement(By.xpath(xpath));
+							System.out.println(elCopy.getText());
+							break;
 						default:
 //							System.out.println("Unable to determine expected condition type: " + willWaitForExpectedConditionType);
 							break;
 					}
 				}
-				if(willWaitForJavascriptExecutorString.length()>0) {				
-					
-					final String javascriptExecutorStringCopy = willWaitForJavascriptExecutorString;
-					waitJse.until(new Function<JavascriptExecutor, Boolean>() 
-					{					
-						public Boolean apply(JavascriptExecutor jseCopy) {
-							boolean javascriptStatus = false;
-							if(javascriptExecutorStringCopy.equals("return document.readyState")) {
-								javascriptStatus = jseCopy.executeScript("return document.readyState").toString().equals("complete");
-							}
-							else {
-								//this is untested, and will have to catch a number of other common results that gets returned from running Javascript
-								//will need a javascript validator (but for now, just provide a set of common commands
-								//WARNING: This can also break the application, as running any string as javascript grants user access to the insides of the targetted application
-								javascriptStatus = (boolean)jseCopy.executeScript(javascriptExecutorStringCopy);
-							}
-							return javascriptStatus;
-						}
-					});	
-				}		
+//				if(willWaitForJavascriptExecutorString.length()>0) {				
+//					
+//					final String javascriptExecutorStringCopy = willWaitForJavascriptExecutorString;
+//					waitJse.until(new Function<JavascriptExecutor, Boolean>() 
+//					{					
+//						public Boolean apply(JavascriptExecutor jseCopy) {
+//							boolean javascriptStatus = false;
+//							if(javascriptExecutorStringCopy.equals("return document.readyState")) {
+//								javascriptStatus = jseCopy.executeScript("return document.readyState").toString().equals("complete");
+//							}
+//							else {
+//								//this is untested, and will have to catch a number of other common results that gets returned from running Javascript
+//								//will need a javascript validator (but for now, just provide a set of common commands
+//								//WARNING: This can also break the application, as running any string as javascript grants user access to the insides of the targetted application
+//								javascriptStatus = (boolean)jseCopy.executeScript(javascriptExecutorStringCopy);
+//							}
+//							return javascriptStatus;
+//						}
+//					});	
+//				}		
 
 			}
 
@@ -296,6 +338,8 @@ public class AutomationToolset {
 			WebElement mySelectElement = driver.findElement(By.id("product-type"));
 			Select dropdown = new Select(mySelectElement);
 			dropdown.selectByVisibleText(willSimulateDropdownSelect);
+//			dropdown.selectByValue(willSimulateDropdownSelect);
+//			dropdown.selectByIndex(1);
 		}
 	}
 	//Execute
@@ -355,7 +399,10 @@ public class AutomationToolset {
 //			options.addArguments("--allow-file-access-from-files");			
 			System.setProperty("webdriver.chrome.driver", chromeDriverLocation);              
 			driver = new ChromeDriver(options);
-			
+		    driver.get("about:blank");
+		    driver.manage().window().maximize(); 
+		 
+		    
 			addActionToNavigationPath("[Initialize " + chromeDriverLocation + "]\r\n");
 		}
 		
