@@ -1,7 +1,7 @@
 ---
 Test
 ---
-!path C:\Users\Gerard\Documents\GitHub\automation\target\classes
+!path C:\eclipse-workspace\automation\target\classes
 
 !***> paths
 
@@ -25,58 +25,58 @@ Test
 !path C:\Program Files\Java\jre1.8.0_161\lib\ext\sunmscapi.jar
 !path C:\Program Files\Java\jre1.8.0_161\lib\ext\sunpkcs11.jar
 !path C:\Program Files\Java\jre1.8.0_161\lib\ext\zipfs.jar
-!path C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-java\3.9.1\selenium-java-3.9.1.jar
-!path C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-api\3.9.1\selenium-api-3.9.1.jar
-!path C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.9.1\selenium-chrome-driver-3.9.1.jar
-!path C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.9.1\selenium-edge-driver-3.9.1.jar
-!path C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.9.1\selenium-firefox-driver-3.9.1.jar
-!path C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.9.1\selenium-ie-driver-3.9.1.jar
-!path C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.9.1\selenium-opera-driver-3.9.1.jar
-!path C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.9.1\selenium-remote-driver-3.9.1.jar
-!path C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.9.1\selenium-safari-driver-3.9.1.jar
-!path C:\Users\Gerard\.m2\repository\org\seleniumhq\selenium\selenium-support\3.9.1\selenium-support-3.9.1.jar
-!path C:\Users\Gerard\.m2\repository\net\bytebuddy\byte-buddy\1.7.9\byte-buddy-1.7.9.jar
-!path C:\Users\Gerard\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar
-!path C:\Users\Gerard\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar
-!path C:\Users\Gerard\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar
-!path C:\Users\Gerard\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar
-!path C:\Users\Gerard\.m2\repository\com\google\guava\guava\23.6-jre\guava-23.6-jre.jar
-!path C:\Users\Gerard\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar
-!path C:\Users\Gerard\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar
-!path C:\Users\Gerard\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar
-!path C:\Users\Gerard\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar
-!path C:\Users\Gerard\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar
-!path C:\Users\Gerard\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar
-!path C:\Users\Gerard\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar
-!path C:\Users\Gerard\.m2\repository\com\squareup\okhttp3\okhttp\3.9.1\okhttp-3.9.1.jar
-!path C:\Users\Gerard\.m2\repository\com\squareup\okio\okio\1.13.0\okio-1.13.0.jar
-!path C:\Users\Gerard\.m2\repository\org\apache\poi\poi\3.17\poi-3.17.jar
-!path C:\Users\Gerard\.m2\repository\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar
-!path C:\Users\Gerard\.m2\repository\org\apache\poi\poi-ooxml\3.17\poi-ooxml-3.17.jar
-!path C:\Users\Gerard\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.17\poi-ooxml-schemas-3.17.jar
-!path C:\Users\Gerard\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar
-!path C:\Users\Gerard\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar
-!path C:\Users\Gerard\.m2\repository\com\github\virtuald\curvesapi\1.04\curvesapi-1.04.jar
-!path C:\Users\Gerard\.m2\repository\org\fitnesse\fitnesse\20180127\fitnesse-20180127.jar
-!path C:\Users\Gerard\.m2\repository\org\htmlparser\htmlparser\2.1\htmlparser-2.1.jar
-!path C:\Users\Gerard\.m2\repository\org\htmlparser\htmllexer\2.1\htmllexer-2.1.jar
-!path C:\Users\Gerard\.m2\repository\org\apache\velocity\velocity\1.7\velocity-1.7.jar
-!path C:\Users\Gerard\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar
-!path C:\Users\Gerard\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar
-!path C:\Users\Gerard\.m2\repository\org\json\json\20151123\json-20151123.jar
-!path C:\Users\Gerard\.m2\repository\com\googlecode\java-diff-utils\diffutils\1.3.0\diffutils-1.3.0.jar
-!path C:\Users\Gerard\.m2\repository\org\apache\ant\ant\1.9.6\ant-1.9.6.jar
-!path C:\Users\Gerard\.m2\repository\org\apache\ant\ant-launcher\1.9.6\ant-launcher-1.9.6.jar
-!path C:\Users\Gerard\.m2\repository\junit\junit\4.12\junit-4.12.jar
-!path C:\Users\Gerard\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar
+!path C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-java\3.9.1\selenium-java-3.9.1.jar
+!path C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-api\3.9.1\selenium-api-3.9.1.jar
+!path C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.9.1\selenium-chrome-driver-3.9.1.jar
+!path C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.9.1\selenium-edge-driver-3.9.1.jar
+!path C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.9.1\selenium-firefox-driver-3.9.1.jar
+!path C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.9.1\selenium-ie-driver-3.9.1.jar
+!path C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.9.1\selenium-opera-driver-3.9.1.jar
+!path C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.9.1\selenium-remote-driver-3.9.1.jar
+!path C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.9.1\selenium-safari-driver-3.9.1.jar
+!path C:\Users\gaguilar\.m2\repository\org\seleniumhq\selenium\selenium-support\3.9.1\selenium-support-3.9.1.jar
+!path C:\Users\gaguilar\.m2\repository\net\bytebuddy\byte-buddy\1.7.9\byte-buddy-1.7.9.jar
+!path C:\Users\gaguilar\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar
+!path C:\Users\gaguilar\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar
+!path C:\Users\gaguilar\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar
+!path C:\Users\gaguilar\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar
+!path C:\Users\gaguilar\.m2\repository\com\google\guava\guava\23.6-jre\guava-23.6-jre.jar
+!path C:\Users\gaguilar\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar
+!path C:\Users\gaguilar\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar
+!path C:\Users\gaguilar\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar
+!path C:\Users\gaguilar\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar
+!path C:\Users\gaguilar\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar
+!path C:\Users\gaguilar\.m2\repository\org\apache\httpcomponents\httpclient\4.5.3\httpclient-4.5.3.jar
+!path C:\Users\gaguilar\.m2\repository\org\apache\httpcomponents\httpcore\4.4.6\httpcore-4.4.6.jar
+!path C:\Users\gaguilar\.m2\repository\com\squareup\okhttp3\okhttp\3.9.1\okhttp-3.9.1.jar
+!path C:\Users\gaguilar\.m2\repository\com\squareup\okio\okio\1.13.0\okio-1.13.0.jar
+!path C:\Users\gaguilar\.m2\repository\org\apache\poi\poi\3.17\poi-3.17.jar
+!path C:\Users\gaguilar\.m2\repository\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar
+!path C:\Users\gaguilar\.m2\repository\org\apache\poi\poi-ooxml\3.17\poi-ooxml-3.17.jar
+!path C:\Users\gaguilar\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.17\poi-ooxml-schemas-3.17.jar
+!path C:\Users\gaguilar\.m2\repository\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar
+!path C:\Users\gaguilar\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar
+!path C:\Users\gaguilar\.m2\repository\com\github\virtuald\curvesapi\1.04\curvesapi-1.04.jar
+!path C:\Users\gaguilar\.m2\repository\org\fitnesse\fitnesse\20180127\fitnesse-20180127.jar
+!path C:\Users\gaguilar\.m2\repository\org\htmlparser\htmlparser\2.1\htmlparser-2.1.jar
+!path C:\Users\gaguilar\.m2\repository\org\htmlparser\htmllexer\2.1\htmllexer-2.1.jar
+!path C:\Users\gaguilar\.m2\repository\org\apache\velocity\velocity\1.7\velocity-1.7.jar
+!path C:\Users\gaguilar\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar
+!path C:\Users\gaguilar\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar
+!path C:\Users\gaguilar\.m2\repository\org\json\json\20151123\json-20151123.jar
+!path C:\Users\gaguilar\.m2\repository\com\googlecode\java-diff-utils\diffutils\1.3.0\diffutils-1.3.0.jar
+!path C:\Users\gaguilar\.m2\repository\org\apache\ant\ant\1.9.6\ant-1.9.6.jar
+!path C:\Users\gaguilar\.m2\repository\org\apache\ant\ant-launcher\1.9.6\ant-launcher-1.9.6.jar
+!path C:\Users\gaguilar\.m2\repository\junit\junit\4.12\junit-4.12.jar
+!path C:\Users\gaguilar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar
 !path C:\commons-io-2.6\commons-io-2.6.jar
-!path C:\Users\Gerard\.m2\repository\com\nativelibs4java\bridj\0.6.2\bridj-0.6.2.jar
+!path C:\Users\gaguilar\.m2\repository\com\nativelibs4java\bridj\0.6.2\bridj-0.6.2.jar
 !path C:\image-comparison-1.0.jar
-!path C:\Users\Gerard\.m2\repository\com\sikulix\sikulixapi\1.1.0\sikulixapi-1.1.0.jar
-!path C:\Users\Gerard\.p2\pool\plugins\org.testng_6.13.1.r201712040515.jar
-!path C:\Users\Gerard\.p2\pool\plugins\com.beust.jcommander_1.72.0.jar
-!path C:\Users\Gerard\.p2\pool\plugins\org.apache-extras.beanshell.bsh_2.0.0.b6.jar
-!path C:\Users\Gerard\.p2\pool\plugins\org.yaml.snakeyaml_1.17.0.jar
+!path C:\Users\gaguilar\.m2\repository\com\sikulix\sikulixapi\1.1.0\sikulixapi-1.1.0.jar
+!path C:\Users\gaguilar\.p2\pool\plugins\org.testng_6.13.1.r201712040515.jar
+!path C:\Users\gaguilar\.p2\pool\plugins\com.beust.jcommander_1.72.0.jar
+!path C:\Users\gaguilar\.p2\pool\plugins\org.apache-extras.beanshell.bsh_2.0.0.b6.jar
+!path C:\Users\gaguilar\.p2\pool\plugins\org.yaml.snakeyaml_1.17.0.jar
 *!
 !***> imports
 
@@ -90,10 +90,9 @@ Test
 |fitnesse.fixtures|
 *!
 
-!|AutomationToolset                                                                                                                                                                                                                                                                                                     |
-|notes       |setup command      |chrome binary location                          |execute command?|xpath                                                           |willWaitForExpectedConditionType|wait for?|will simulate navigation                    |will simulate click|will simulate dropdown select|simulate?|
-|home        |initialize baseline|C:\GoogleChromePortable\GoogleChromePortable.exe|                |                                                                |                                |         |http://inhancemetrics.com:3012/test-new.html|                   |                             |         |
-|Product_Type|                   |                                                |                |/html[1]/body[1]/div[3]/div[1]/select[1]                        |                                |         |                                            |                   |                             |         |
-|            |                   |                                                |                |/html[1]/body[1]/div[3]/div[1]/select[1]                        |                                |         |                                            |                   |Window                       |         |
-|Product     |                   |                                                |                |/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/select[1]/option[2]|presenceOfElementLocated        |         |                                            |                   |Awning                             |         |
-|end         |end                |                                                |                |                                                                |                                |         |                                            |                   |                             |         |
+!|AutomationToolset                                                                                                                                                                                                                                                                                                |
+|notes       |setup command      |chrome binary location                          |execute command?|xpath                                                 |will Wait For Expected Condition Type|wait for?|will simulate navigation                    |will simulate click|will simulate dropdown select|simulate?|
+|home        |initialize baseline|C:\GoogleChromePortable\GoogleChromePortable.exe|                |                                                      |                                     |         |http://inhancemetrics.com:3012/test-new.html|                   |                             |         |
+|Product_Type|                   |                                                |                |/html[1]/body[1]/div[3]/div[1]/select[1]              |presenceOfElementLocated             |         |                                            |                   |Window                       |         |
+|Product     |                   |                                                |                |/html[1]/body[1]/div[3]/div[1]/div[1]/div[1]/select[1]|presenceOfElementLocated             |         |                                            |                   |Awning                       |         |
+|end         |end                |                                                |                |                                                      |                                     |         |                                            |                   |                             |         |

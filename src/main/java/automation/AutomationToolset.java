@@ -1,5 +1,6 @@
 package automation;
 
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,6 +10,7 @@ import java.io.PrintWriter;
 import java.net.URL;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -26,7 +28,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.sikuli.script.Screen;
+//import org.sikuli.script.Screen;
 
 import com.google.common.base.Function;
 
@@ -48,7 +50,7 @@ import com.google.common.base.Function;
 public class AutomationToolset {
 	public WebDriver driver;
 	public WebDriverWait wait;
-	public Screen s = new Screen();
+//	public Screen s = new Screen();
 	public String instanceStartTime;
 	public ArrayList<String> navigationPath;
 	public String cwd;
@@ -247,7 +249,8 @@ public class AutomationToolset {
 				Wait<JavascriptExecutor> waitJse = new FluentWait<JavascriptExecutor>(jseWait)
 					    .withTimeout(6, TimeUnit.SECONDS)
 					    .pollingEvery(2, TimeUnit.SECONDS)
-					    .ignoring(NoSuchElementException.class);
+					    .ignoring(NoSuchElementException.class)
+					    .ignoring(ElementNotVisibleException.class);
 				
 				String[] splitXpath = xpath.split("/");
 				if(splitXpath[splitXpath.length-1].contains("select")) {
@@ -334,9 +337,15 @@ public class AutomationToolset {
 	public void selectFromDropdown() {
 		//maybe some kind of newline/tab delimiters?
 		//Excel would be best
-		if(willSimulateDropdownSelect.length()>0) {
-			WebElement mySelectElement = driver.findElement(By.id("product-type"));
+		System.out.println(willSimulateDropdownSelect + " | " + xpath);
+		if(willSimulateDropdownSelect.length()>0) {			
+			WebElement mySelectElement = driver.findElement(By.xpath(xpath));
 			Select dropdown = new Select(mySelectElement);
+			List<WebElement> els = dropdown.getOptions();
+			for(int i=0; i<els.size(); i++) {
+				System.out.print(els.get(i).toString());	
+				System.out.println(els.get(i).getAttribute("innerHTML"));
+			}
 			dropdown.selectByVisibleText(willSimulateDropdownSelect);
 //			dropdown.selectByValue(willSimulateDropdownSelect);
 //			dropdown.selectByIndex(1);
