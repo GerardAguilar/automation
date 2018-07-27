@@ -56,6 +56,8 @@ public class AutomationToolset {
 	public String cwd;
 	public String chromeBinaryLocation;
 	public String xpath;	
+	public String elementId;
+	public String customAttributeIdPair;
 	public String setupCommand;	
 	public String notes;
 	public PrintWriter out;
@@ -162,6 +164,19 @@ public class AutomationToolset {
 	public String getXpath() {
 		return xpath;
 	}
+	public void setElementId(String temp) {
+		elementId = temp;
+	}
+	public String getELementId() {
+		return elementId;
+	}
+	public void setCustomAttributeIdPair(String temp) {
+		customAttributeIdPair = temp;
+	}
+	public String getCustomAttributeIdPair() {
+		return customAttributeIdPair;
+	}
+	
 	public void setSetupCommand(String temp) {
 		setupCommand = temp;
 	}
@@ -183,29 +198,10 @@ public class AutomationToolset {
 			
 	public void simulate() {
 		navigateByGlobalAddress();
-		clickElementByXpath();
+		clickElement();
 		selectFromDropdown();
 	}
-	
-	public void waitForSelectDropdownOptions() {
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-			    .withTimeout(6, TimeUnit.SECONDS)
-			    .pollingEvery(1, TimeUnit.SECONDS)
-			    .ignoring(NoSuchElementException.class);
 		
-		wait.until(new Function<WebDriver, Boolean>() 
-		{
-			public Boolean apply(WebDriver driverCopy) {
-				Select select = new Select(driver.findElement(By.xpath(xpath)));
-				int count = select.getOptions().size();
-				boolean selectHasOptions = count>1;
-	            System.out.println("count: " + count);
-	            return selectHasOptions;
-			}
-		});	
-		
-	}
-	
 	//Waits for source code to stabilize and be identical, needs testing and may need other waits (CSS, JQuery, ExpectedConditions)
 	//May also need to make the timeout value parameterized
 	public void waitForIdenticalPageSources() {	
@@ -234,34 +230,147 @@ public class AutomationToolset {
 	}
 	
 	//Wait for image to appear
-		public void waitFor() {
-			if(xpath.length()>0) {
-//				System.out.println("actually locateElementInPageByXpathAndWaitForNonZeroWidth: " + xpath + "_wait");
+	public void waitFor() {
+		if(xpath.length()>0 || elementId.length()>0 || customAttributeIdPair.length()>0) {
+			Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)			    
+					.withTimeout(12, TimeUnit.SECONDS)
+				    .pollingEvery((long) .5, TimeUnit.SECONDS)
+				    .ignoring(NoSuchElementException.class)
+					.ignoring(ElementNotVisibleException.class);
+			
+			JavascriptExecutor jseWait = (JavascriptExecutor)driver;
+			Wait<JavascriptExecutor> waitJse = new FluentWait<JavascriptExecutor>(jseWait)
+				    .withTimeout(6, TimeUnit.SECONDS)
+				    .pollingEvery(2, TimeUnit.SECONDS)
+				    .ignoring(NoSuchElementException.class)
+				    .ignoring(ElementNotVisibleException.class);
+			
+			if (customAttributeIdPair.length()>0) {
+				addActionToNavigationPath("-wait for " + "*["+customAttributeIdPair+"]");			
+				WebElement tempElement = driver.findElement(By.cssSelector("*["+customAttributeIdPair+"]"));
+				String tempAttr = tempElement.getAttribute("type");
+				if(tempAttr.equals("select")) {
+					wait.until(new Function<WebDriver, Boolean>() 
+					{
+						public Boolean apply(WebDriver driverCopy) {
+							Select select = new Select(driver.findElement(By.id(elementId)));
+							int count = select.getOptions().size();
+							boolean selectHasOptions = count>1;
+				            System.out.println("count: " + count);
+				            return selectHasOptions;
+						}
+					});				
+				}				
+				
+				if(willWaitForExpectedConditionType.length()>0) {
+					willWaitForExpectedConditionType = willWaitForExpectedConditionType.toLowerCase();
+					switch(willWaitForExpectedConditionType) {
+						case "":
+//								System.out.println("Expected Condition Type is empty");
+							break;
+						case "elementtobeselected":
+							wait.until(ExpectedConditions.elementToBeSelected(By.cssSelector("*["+customAttributeIdPair+"]")));
+							System.out.println("wait elementtobeselected end");
+							break;
+						case "elementtobeclickable":
+							wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("*["+customAttributeIdPair+"]")));
+							System.out.println("wait elementtobeclickable end");
+							break;
+						case "visibilityofelementlocated":
+							wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("*["+customAttributeIdPair+"]")));
+							System.out.println("wait visibilityofelementlocated end");
+							break;
+						case "invisibilityofelementlocated":
+							wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("*["+customAttributeIdPair+"]")));
+							System.out.println("wait invisibilityofelementlocated end");
+							break;
+						case "presenceOfElementLocated":
+							wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("*["+customAttributeIdPair+"]")));
+							System.out.println("wait presentOfElementLocated");
+							WebElement elCopy = driver.findElement(By.id(elementId));
+							System.out.println(elCopy.getText());
+							break;
+						default:
+//							System.out.println("Unable to determine expected condition type: " + willWaitForExpectedConditionType);
+							break;
+					}
+				}
+			}
+			else if (elementId.length()>0) {
+				addActionToNavigationPath("-wait for " + elementId);	
+			
+				WebElement tempElement = driver.findElement(By.id(elementId));
+				String tempAttr = tempElement.getAttribute("type");
+				if(tempAttr.equals("select")) {
+					wait.until(new Function<WebDriver, Boolean>() 
+					{
+						public Boolean apply(WebDriver driverCopy) {
+							Select select = new Select(driver.findElement(By.id(elementId)));
+							int count = select.getOptions().size();
+							boolean selectHasOptions = count>1;
+				            System.out.println("count: " + count);
+				            return selectHasOptions;
+						}
+					});				
+				}
+				
+				
+				if(willWaitForExpectedConditionType.length()>0) {
+					willWaitForExpectedConditionType = willWaitForExpectedConditionType.toLowerCase();
+					switch(willWaitForExpectedConditionType) {
+						case "":
+//								System.out.println("Expected Condition Type is empty");
+							break;
+						case "elementtobeselected":
+							wait.until(ExpectedConditions.elementToBeSelected(By.id(elementId)));
+							System.out.println("wait elementtobeselected end");
+							break;
+						case "elementtobeclickable":
+							wait.until(ExpectedConditions.elementToBeClickable(By.id(elementId)));
+							System.out.println("wait elementtobeclickable end");
+							break;
+						case "visibilityofelementlocated":
+							wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(elementId)));
+							System.out.println("wait visibilityofelementlocated end");
+							break;
+						case "invisibilityofelementlocated":
+							wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id(elementId)));
+							System.out.println("wait invisibilityofelementlocated end");
+							break;
+						case "presenceOfElementLocated":
+							wait.until(ExpectedConditions.presenceOfElementLocated(By.id(elementId)));
+							System.out.println("wait presentOfElementLocated");
+							WebElement elCopy = driver.findElement(By.id(elementId));
+							System.out.println(elCopy.getText());
+							break;
+						default:
+//							System.out.println("Unable to determine expected condition type: " + willWaitForExpectedConditionType);
+							break;
+					}
+				}
+			}
+			else if(xpath.length()>0) {
 				addActionToNavigationPath("-wait for " + xpath);	
-
-				Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)			    
-						.withTimeout(12, TimeUnit.SECONDS)
-					    .pollingEvery((long) .5, TimeUnit.SECONDS)
-					    .ignoring(NoSuchElementException.class)
-						.ignoring(ElementNotVisibleException.class);
-				
-				JavascriptExecutor jseWait = (JavascriptExecutor)driver;
-				Wait<JavascriptExecutor> waitJse = new FluentWait<JavascriptExecutor>(jseWait)
-					    .withTimeout(6, TimeUnit.SECONDS)
-					    .pollingEvery(2, TimeUnit.SECONDS)
-					    .ignoring(NoSuchElementException.class)
-					    .ignoring(ElementNotVisibleException.class);
-				
+			
 				String[] splitXpath = xpath.split("/");
-				if(splitXpath[splitXpath.length-1].contains("select")) {
-					waitForSelectDropdownOptions();					
+				if(splitXpath[splitXpath.length-1].contains("select")) {						
+					wait.until(new Function<WebDriver, Boolean>() 
+					{
+						public Boolean apply(WebDriver driverCopy) {
+							Select select = new Select(driver.findElement(By.xpath(xpath)));
+							int count = select.getOptions().size();
+							boolean selectHasOptions = count>1;
+				            System.out.println("count: " + count);
+				            return selectHasOptions;
+						}
+					});	
 				}
 				
 				if(willWaitForExpectedConditionType.length()>0) {
 					willWaitForExpectedConditionType = willWaitForExpectedConditionType.toLowerCase();
 					switch(willWaitForExpectedConditionType) {
 						case "":
-//							System.out.println("Expected Condition Type is empty");
+//								System.out.println("Expected Condition Type is empty");
 							break;
 						case "elementtobeselected":
 							wait.until(ExpectedConditions.elementToBeSelected(By.xpath(xpath)));
@@ -286,34 +395,13 @@ public class AutomationToolset {
 							System.out.println(elCopy.getText());
 							break;
 						default:
-//							System.out.println("Unable to determine expected condition type: " + willWaitForExpectedConditionType);
+//								System.out.println("Unable to determine expected condition type: " + willWaitForExpectedConditionType);
 							break;
 					}
 				}
-//				if(willWaitForJavascriptExecutorString.length()>0) {				
-//					
-//					final String javascriptExecutorStringCopy = willWaitForJavascriptExecutorString;
-//					waitJse.until(new Function<JavascriptExecutor, Boolean>() 
-//					{					
-//						public Boolean apply(JavascriptExecutor jseCopy) {
-//							boolean javascriptStatus = false;
-//							if(javascriptExecutorStringCopy.equals("return document.readyState")) {
-//								javascriptStatus = jseCopy.executeScript("return document.readyState").toString().equals("complete");
-//							}
-//							else {
-//								//this is untested, and will have to catch a number of other common results that gets returned from running Javascript
-//								//will need a javascript validator (but for now, just provide a set of common commands
-//								//WARNING: This can also break the application, as running any string as javascript grants user access to the insides of the targetted application
-//								javascriptStatus = (boolean)jseCopy.executeScript(javascriptExecutorStringCopy);
-//							}
-//							return javascriptStatus;
-//						}
-//					});	
-//				}		
-
 			}
-
-		}
+		}			
+	}
 	
 	
 	//Navigate
@@ -325,31 +413,64 @@ public class AutomationToolset {
 	}
 	
 	//Click
-	public void clickElementByXpath() {
-		if(xpath.length()>0 && willSimulateClick) {
-			WebElement element = driver.findElement(By.xpath(xpath));			
-			addActionToNavigationPath("-click " + xpath);
-			element.click();
+	public void clickElement() {
+		if(willSimulateClick) {
+			if(customAttributeIdPair.length()>0) {
+				WebElement element = driver.findElement(By.cssSelector("*["+customAttributeIdPair+"]"));			
+				addActionToNavigationPath("-click " + elementId);
+				element.click();
+			}
+			else if(elementId.length()>0) {
+				WebElement element = driver.findElement(By.id(elementId));			
+				addActionToNavigationPath("-click " + elementId);
+				element.click();
+			}
+			else if(xpath.length()>0) {
+				WebElement element = driver.findElement(By.xpath(xpath));			
+				addActionToNavigationPath("-click " + xpath);
+				element.click();
+			}
 		}
+
 	}
 	
 	//Select
 	public void selectFromDropdown() {
 		//maybe some kind of newline/tab delimiters?
 		//Excel would be best
-		System.out.println(willSimulateDropdownSelect + " | " + xpath);
-		if(willSimulateDropdownSelect.length()>0) {			
-			WebElement mySelectElement = driver.findElement(By.xpath(xpath));
-			Select dropdown = new Select(mySelectElement);
-			List<WebElement> els = dropdown.getOptions();
-			for(int i=0; i<els.size(); i++) {
-				System.out.print(els.get(i).toString());	
-				System.out.println(els.get(i).getAttribute("innerHTML"));
+		if(willSimulateDropdownSelect.length()>0) {
+			if(customAttributeIdPair.length()>0) {			
+				WebElement mySelectElement = driver.findElement(By.cssSelector("*["+customAttributeIdPair+"]"));
+				Select dropdown = new Select(mySelectElement);
+//				List<WebElement> els = dropdown.getOptions();
+//				for(int i=0; i<els.size(); i++) {
+//					System.out.print(els.get(i).toString());	
+//					System.out.println(els.get(i).getAttribute("innerHTML"));
+//				}
+				dropdown.selectByVisibleText(willSimulateDropdownSelect);
 			}
-			dropdown.selectByVisibleText(willSimulateDropdownSelect);
-//			dropdown.selectByValue(willSimulateDropdownSelect);
-//			dropdown.selectByIndex(1);
-		}
+			else if(elementId.length()>0) {			
+				WebElement mySelectElement = driver.findElement(By.id(elementId));
+				Select dropdown = new Select(mySelectElement);
+//				List<WebElement> els = dropdown.getOptions();
+//				for(int i=0; i<els.size(); i++) {
+//					System.out.print(els.get(i).toString());	
+//					System.out.println(els.get(i).getAttribute("innerHTML"));
+//				}
+				dropdown.selectByVisibleText(willSimulateDropdownSelect);
+			}
+			else if(xpath.length()>0) {
+				WebElement mySelectElement = driver.findElement(By.xpath(xpath));
+				Select dropdown = new Select(mySelectElement);
+//				List<WebElement> els = dropdown.getOptions();
+//				for(int i=0; i<els.size(); i++) {
+//					System.out.print(els.get(i).toString());	
+//					System.out.println(els.get(i).getAttribute("innerHTML"));
+//				}
+				dropdown.selectByVisibleText(willSimulateDropdownSelect);
+			}
+		} 
+
 	}
 	//Execute
 	public void executeCommand() {
