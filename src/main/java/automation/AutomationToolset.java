@@ -245,10 +245,28 @@ public class AutomationToolset {
 				    .ignoring(NoSuchElementException.class)
 				    .ignoring(ElementNotVisibleException.class);
 			
-			if (customAttributeIdPair.length()>0) {
+			if (customAttributeIdPair.length()>0 && (willSimulateDropdownSelect.length()>0)) {
 				addActionToNavigationPath("-wait for " + "*["+customAttributeIdPair+"]");			
-				WebElement tempElement = driver.findElement(By.cssSelector("*["+customAttributeIdPair+"]"));
+				
+				wait.until(new Function<WebDriver, Boolean>(){
+					public Boolean apply(WebDriver driverCopy) {
+						System.out.println("waitFor(): " + customAttributeIdPair);
+						Boolean elementIsPresent = false;
+						WebElement tempElement = driver.findElement(By.cssSelector("*["+customAttributeIdPair+"]"));
+						if(tempElement!=null) {
+							elementIsPresent = true;
+						}else {
+							elementIsPresent = false;
+						}
+						return elementIsPresent;						
+					}
+				});
+				
+				
+				
+				WebElement tempElement = driver.findElement(By.cssSelector("*["+customAttributeIdPair+"]"));				
 				String tempAttr = tempElement.getAttribute("type");
+				
 				if(tempAttr.equals("select")) {
 					wait.until(new Function<WebDriver, Boolean>() 
 					{
