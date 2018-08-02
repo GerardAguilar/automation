@@ -1,6 +1,8 @@
 package automation;
 
 
+import java.awt.Color;
+import java.awt.image.BufferedImage;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,11 +15,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import javax.imageio.ImageIO;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -61,7 +67,7 @@ public class AutomationToolset {
 	public String setupCommand;	
 	public String notes;
 	public PrintWriter out;
-	public boolean baselineSet = false;
+//	public boolean baselineSet = false;
 	public String loc;		
 	
 	public boolean willSimulateClick;
@@ -260,9 +266,7 @@ public class AutomationToolset {
 						}
 						return elementIsPresent;						
 					}
-				});
-				
-				
+				});		
 				
 				WebElement tempElement = driver.findElement(By.cssSelector("*["+customAttributeIdPair+"]"));				
 				String tempAttr = tempElement.getAttribute("type");
@@ -574,7 +578,7 @@ public class AutomationToolset {
 	public void createLogFile() {
         try {
         	loc ="";
-        	if(baselineSet) {
+        	if(willTakeBaselineSet) {
         		loc = cwd+"\\baseline\\log.txt";
         	}else {
         		loc = cwd+"\\current\\"+instanceStartTime+"\\log.txt";
@@ -598,39 +602,134 @@ public class AutomationToolset {
 		}    	
 	}
 	
-//	//TODO postSimulation()
-//	public String postSimulation() {
-//		
-////		takeScreenshotAndGenerateDiff();
-//		//image
-//		if(willEndScreening) {
-//			endScreening();
-//			return ("Finished");
-//		}
-//		else {
-//			return Image();
-//		}
-//	}
+	//TODO postSimulation()
+	public String postSimulation() {		
+		takeScreenshot();
+		if(willEndScreening) {
+			return "Finished";
+		}else {
+			return Image();
+		}		
+	}
 	
-//	public String Image() {
-//		String currentImageId = getNavigationPathAltEventId()+"";
-//		String currentImagePath = getLastSetOfActions(navigationPathAlternate, 1);
-//		//if interacting, hide the image
-//		if(willSimulateClick
-//				||willSimulateHover
-//				||willSimulateNavigation.length()>0
-//				||willGenerateNewTab
-//				||(willSimulatePageScrollPosition.length()>0)) {
-//			return "<div><details><summary>"+currentImageId+"</summary><p>"+currentImagePath+"</p></details></div><div><details><summary>Image</summary><img src='http://localhost/files/"+currentImageId+".png' height='150'></details>Element click may have caused movement. Verify next screenshot for result.</div>";
-//		}else {
-//			return "<div><details><summary>"+currentImageId+"</summary><p>"+currentImagePath+"</p></details></div><div><img src='http://localhost/files/"+currentImageId+".png' height='150'></div>";
-//		}	
-//	}
+	@SuppressWarnings("unused")
+	public void takeScreenshot() {
+		File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		Long timestamp = (new Timestamp(System.currentTimeMillis())).getTime();
+		String navId = getNavigationPathEventId()+"";
+		String fitnesseRootFileDirectory = "C:\\eclipse-workspace\\automation\\FitNesseRoot\\files\\";
+		String currentFilename = fitnesseRootFileDirectory+""+navId+".png";
+		
+		try {
+			FileUtils.copyFile(screenshotFile, new File(currentFilename));					
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
+				
+	}
 	
-//	public void endScreening() {
-//		out.close();
-//		driver.close();
-//	}
+	/***
+	 * Calls getDifferenceImage() and writes the image into an outputfile	 * 
+	 * @param baselineImage
+	 * @param newImage
+	 * @param someLocation
+	 */
+	public void compareBaseLineWithImmediateScreenshot(BufferedImage baselineImage, BufferedImage newImage, String diffFileName) {
+		BufferedImage diff = getDifferenceImage(baselineImage, newImage);
+		File outputfile = new File(diffFileName); 
+		try {
+			ImageIO.write(diff, "png", outputfile);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	@SuppressWarnings("unused")
+	public static BufferedImage getDifferenceImage(BufferedImage img1, BufferedImage img2) {
+	    BufferedImage outImg;
+	    int width2 = img2.getWidth(); // take no arguments
+	    int height2 = img2.getHeight();
+	    //if there's no baseline image
+	    if(img1==null) {
+	    	outImg = new BufferedImage(width2, height2, BufferedImage.TYPE_INT_RGB);
+	        for(int i=0; i<height2; i++) {
+	        	for(int j=0; j<width2; j++) {
+	        		int lightGrey =  Color.LIGHT_GRAY.getRGB();
+	        		outImg.setRGB(j, i, lightGrey);	   
+	        	}
+	        }
+	    }else {
+		    int width1 = img1.getWidth(); // Change - getWidth() and getHeight() for BufferedImage
+		    int height1 = img1.getHeight();
+	    	
+	    	//if the screenshot image does not have the same dimensions as the baseline image
+	    	if ((width1 != width2) || (height1 != height2)) {
+	    		//use the smaller of each dimension to create the outimg
+	    		int smallerWidth = Math.min(width1,  width2);
+	    		int smallerHeight = Math.min(height1, height2);
+	    		outImg = new BufferedImage(smallerWidth, smallerHeight, BufferedImage.TYPE_INT_RGB);
+		        System.err.println("Error: Images dimensions mismatch");
+		        //change diff output to grey
+		        for(int i=0; i<smallerHeight; i++) {
+		        	for(int j=0; j<smallerWidth; j++) {
+//		        		int white = img1.getRGB(j,i)*100;
+		        		int blue =  Color.BLUE.getRGB();
+		        		outImg.setRGB(j, i, blue);	   
+		        	}
+		        }
+		    //finally, if the baseline image exists and the screenshot image has the same dimensions.
+		    }else {
+		    	outImg = new BufferedImage(width1, height1, BufferedImage.TYPE_INT_RGB);
+			    // Modified - Changed to int as pixels are ints
+			    int diff;
+			    int result; // Stores output pixel
+			    for (int i = 0; i < height1; i++) {
+			        for (int j = 0; j < width1; j++) {
+			            int rgb1 = img1.getRGB(j, i);
+			            int rgb2 = img2.getRGB(j, i);
+			            int r1 = (rgb1 >> 16) & 0xff;
+			            int g1 = (rgb1 >> 8) & 0xff;
+			            int b1 = (rgb1) & 0xff;
+			            int r2 = (rgb2 >> 16) & 0xff;
+			            int g2 = (rgb2 >> 8) & 0xff;
+			            int b2 = (rgb2) & 0xff;
+			            diff = Math.abs(r1 - r2);
+			            diff += Math.abs(g1 - g2);
+			            diff += Math.abs(b1 - b2);
+//			            diff /= 3; // Change - Ensure result is between 0 - 255
+			            // Make the difference image gray scale
+			            // The RGB components are all the same
+			            result = (diff << 16) | (diff << 8) | diff;
+			            outImg.setRGB(j, i, result); // Set result
+			        }
+			    }
+		    }
+	    }
+	    return outImg;
+	}
+	
+	public String Image() {
+		String currentImageId = getNavigationPathEventId()+"";
+		String currentImagePath = getLastSetOfActions(navigationPath, 1);
+		return "<div><details><summary>"+currentImageId+"</summary><p>"+currentImagePath+"</p></details></div><div><img src='http://localhost/files/"+currentImageId+".png' height='150'></div>";
+	}	
+	
+	public int getNavigationPathEventId() {
+		int eventId = navigationPath.size()-1;
+		return eventId;
+	}
+	
+	protected String getLastSetOfActions(ArrayList<String> navArray, int count) {		
+		int arraySize = navArray.size();
+		String temp=navArray.get(arraySize-1);
+		String tempArray[] = temp.split("\n");
+		int tempSize = tempArray.length;
+		return temp;
+	}
+	
+	public void endScreening() {
+		out.close();
+		driver.close();
+	}
 	
 	public static void main(String[] args) {
 		AutomationToolset temp = new AutomationToolset();
